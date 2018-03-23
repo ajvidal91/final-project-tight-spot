@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  font-family: 'Roboto', sans-serif;
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#postArea{
+  width: 50%;
+  margin: 10px auto;
+}
+
+#postTitle{
+width: 50%;
+}
+
+#location{
+margin: 0 0 0 23%;
+width: 15%;
+}
+
+#inputSection{
+width: 100%;
+padding: 0;
+margin: 0 0 10px 0;
+
+}
+
+textarea{
+font-size: 1.2em;
+border: 1px solid black;
+}
+
+.locationSearch{
+margin-top: 20px;
+margin-right: 0;
+padding: 0;
+border: 0;
+width: 10%;
+height: 100%;
+padding: 10px 20px;
+background: white;
+border-radius: 3px;
+box-shadow: 0px 8px 15px rgba($tundora, 0.1);
+transition: all 0.4s ease;
+}
+
+#postHeader li{
+float: right;
+margin-left: 10px;
+font-size: 1.8em;
+font-weight: 100;
+list-style: none;
+color: white;
+text-decoration: none;
+}
+
+#postHeader a{
+color: white;
+text-decoration: none;
+}
+
+#postHeader{
+height: 100px;
+width: auto;
+background: #84333D;
+}
+
+.emailFieldset{
+margin-top: 10px;
+width: 85.5%;
+}
+
+#contactSection input{
+margin-bottom: 5px;
+}
+
+input{
+border: 1px solid black;
+}
+
+#conditionSection{
+width: 89%;
+}
+
+.squareFeetInput{
+width: 15%;
+}
+
+.minimum{
+width: 10%;
+}
+
+.maximum{
+width: 10%;
+}
+
+.phoneNumberInput{
+width: 15%;
+}

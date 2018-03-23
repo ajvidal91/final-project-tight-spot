@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html {
+font-size: 15px;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.loginInput {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #CCC;
+  color: #555;
+  box-sizing: border-box;
+  font-size: 18px;
+  height: 50px;
+  left: 50%;
+  margin: -25px 0 0 -100px;
+  padding: 10px 0px;
+  position: relative;
+  top: 50%;
+  width: 200px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.loginInput::-webkit-input-placeholder {
+  color: #AAA;
+
+}
+
+.loginInput:focus::-webkit-input-placeholder {
+  color: tomato;
+}
+
+.loginInput:focus+.underline {
+  transform: scale(1);
+}
+
+.underline {
+  background-color: dodgerblue;
+  display: inline-block;
+  height: 2px;
+  left: 50px;
+  margin-top: -4px;
+  position: absolute;
+  top: 185px;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  width: 202px;
+}
+
+#main-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.left-container {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://static.pexels.com/photos/37727/pexels-photo-37727.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 45%;
+  padding: 2rem;
+}
+
+.get-started-text {
+  font-size: 4.5rem;
+  color: white;
+  text-transform: uppercase;
+  width: 2rem;
+  position: relative;
+  top: 20%;
+}
+
+.started-word {
+  color: tomato;
+}
+
+.right-container-login {
+  padding: 4rem;
+  width: 65%;
+
+}
+
+.login-text {
+  font-size: 3rem;
+}
+
+a{
+  color: black;
+}
+
+fieldset{
+  width: 50%;
+  border: none;
+}
