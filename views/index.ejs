@@ -1,14 +1,45 @@
 <!DOCTYPE html>
-<html>
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Ads</title>
 </head>
 
-<body>
-  <h1><a href="/login">Log in</a></h1>
-  <h1><a href="/signup">sign up</a></h1>
+<body id="listBody">
+  <header id="adListHeader">
+    <nav>
+      <form class="" action="/message" method="get">
+        <input class="locationSearch" type="text" placeholder="Search location" name="" value="">
+        <button class="locationSearch" type="submit" name="button">Search</button>
+      </form>
+      <ul id="navList">
+        <li><a class="about" href="/about">About</a></li>
+        <li><a class="report" href="/report">Report </a><span> |</span></li>
+        <li><a class="contact" href="/">Log-Out </a><span> |</span></li>
+        <li><a href="/login">Log in</a><span> |</span></li>
+        <li><a href="/signup">sign up</a><span> |</span></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="adsContainer">
+    <p>Ads are updated one at a time. Each poster is only allowed two posts a day. If you suspect foul play from a poster, such as multiple profiles posting the same ad, please <a class="reportLink" href="#">report.</a></p>
+    <ul id="adsListed">
+      <% for(var i=0; i<message.length; i++) {%>
+        <li class="message">
+          <h1><%= message[i].adTitle %></h1>
+          <h5><%= message[i].zip %></h5>
+          <p>
+            <%= message[i].textArea %>
+          </p>
+        </li>
+        <% } %>
+    </ul>
+  </section>
+  <script src="main.js"></script>
+</body>
+
+</html>
 </body>
 
 </html>

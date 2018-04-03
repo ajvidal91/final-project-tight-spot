@@ -15,7 +15,7 @@
     <ul id="navList">
       <li><a class="about" href="#">About</a></li>
       <li><a class="report" href="#">Report |</a></li>
-      <li><a class="contact" href="#">Log-Out |</a></li>
+      <li><a class="contact" href="/">Log-Out |</a></li>
     </ul>
   </nav>
 </header>
@@ -31,14 +31,15 @@
     </section>
     <section id="postContainer">
       <section id="details">
-        <h1>Hard working father in a tight spot</h1>
-        <h4>Lynn,Ma</h4>
-        <h5>posted about 3 hours ago</h5>
+        <% for(var i=0; i<message.length; i++) {%>
+          <h1><%= message[i].adTitle %></h1>
+          <h4><%= message[i].zip %></h4>
+          <h5>? (ask if its worth it to have the time posted shown)</h5>
       </section>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. And to follow the acceptable unto refused by us, of these, or the pangs of a style of life will open. Since of course some of them, that we may be able, in order to free the pain extremely
-        easy to us a Mother of sorrows, I will open the offices in which they seek a flattering welcome the inventor of something similar? I hate the pain to attain this, the time of the encounter will I come, and escaped to seek his own, but with due
-        ancestors, was born. Who are pierced by the flies fall into a free bound to fail as a result. The trouble of the body of them, sort they were, as it were, that the error of the flight because it was invented that man has made some to follow, however,
-        will be joined to the master builder, the wise man of discomfort. Hence, as it were which in the explication thereof of any deserted the general's and impedes it, he wishes to exercise any of the present.</p>
+      <p>
+        <%= message[i].textArea %>
+      </p>
+      <% } %>
     </section>
   </section>
 </body>
