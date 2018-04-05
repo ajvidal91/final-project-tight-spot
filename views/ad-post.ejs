@@ -34,6 +34,18 @@
         <% for(var i=0; i<message.length; i++) {%>
           <h1><%= message[i].adTitle %></h1>
           <h4><%= message[i].zip %></h4>
+          <ul>
+            <li>
+
+              <span><%= message[i].sqFeet %></span>
+              <span><%= message[i].minimum %></span>
+              <span><%= message[i].maximum %></span>
+              <span><%= message[i].pets %></span>
+              <span><%= message[i].family %></span>
+              <span><%= message[i].email %></span>
+              <span><%= message[i].phone %></span>
+            </li>
+          </ul>
           <h5>? (ask if its worth it to have the time posted shown)</h5>
       </section>
       <p>

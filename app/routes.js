@@ -4,19 +4,35 @@ module.exports = function(app, passport, db) {
 
   // show the home page (will also have our login links)
   app.get('/', function(req, res) {
-    res.render('index.ejs');
+    db.collection('message').find().toArray((err, result) => {
+      if (err) return console.log(err)
+      res.render('index.ejs', {
+        message: result
+      })
+    })
+  });
+
+  app.get('/posting', function(req, res) {
+    db.collection('message').find().toArray((err, result) => {
+      if (err) return console.log(err)
+      res.render('ad-post.ejs', {
+        message: result
+      })
+    })
   });
 
   // PROFILE SECTION =========================
-  app.get('/', isLoggedIn, function(req, res) {
-    db.collection('messages').find().toArray((err, result) => {
+  app.get('/profile', isLoggedIn, function(req, res) {
+    db.collection('message').find().toArray((err, result) => {
       if (err) return console.log(err)
-      res.render('index.ejs', {
+      res.render('profile.ejs', {
         user: req.user,
         message: result
       })
     })
   });
+
+
 
   // LOGOUT ==============================
   app.get('/logout', function(req, res) {
