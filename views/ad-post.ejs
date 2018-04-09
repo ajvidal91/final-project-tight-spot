@@ -8,12 +8,12 @@
 </head>
 <header>
   <nav>
-    <form class="" action="index.html" method="post">
+    <form class="" action="/" method="post">
       <input class="locationSearch" type="text" placeholder="Search location" name="" value="">
       <button class="locationSearch" type="submit" name="button">Search</button>
     </form>
     <ul id="navList">
-      <li><a class="about" href="#">About</a></li>
+      <li><a class="about" href="/about">About</a></li>
       <li><a class="report" href="#">Report |</a></li>
       <li><a class="contact" href="/">Log-Out |</a></li>
     </ul>
@@ -31,27 +31,25 @@
     </section>
     <section id="postContainer">
       <section id="details">
-        <% for(var i=0; i<message.length; i++) {%>
-          <h1><%= message[i].adTitle %></h1>
-          <h4><%= message[i].zip %></h4>
-          <ul>
-            <li>
+        <h1><%= message[i].adTitle %></h1>
+        <h4><%= message[i].zip %></h4>
 
-              <span><%= message[i].sqFeet %></span>
-              <span><%= message[i].minimum %></span>
-              <span><%= message[i].maximum %></span>
-              <span><%= message[i].pets %></span>
-              <span><%= message[i].family %></span>
-              <span><%= message[i].email %></span>
-              <span><%= message[i].phone %></span>
-            </li>
-          </ul>
-          <h5>? (ask if its worth it to have the time posted shown)</h5>
+        <p>
+          <%= message[i].textArea %>
+        </p>
+
+        <span> ft <sup>2: </sup><%= message[i].sqFeet %></span>
+        <span>$ <%= message[i].minimum %></span>
+        <span>$ <%= message[i].maximum %></span>
+        <span>pets: <%= message[i].pets %></span>
+        <span>family size: <%= message[i].family %></span>
+        <span>email: <%= message[i].email %></span>
+        <span>phone #: <%= message[i].phone %></span>
+        <span> <%= ad.date.toDateString() %> </span>
       </section>
-      <p>
-        <%= message[i].textArea %>
-      </p>
-      <% } %>
+      <% }%>
+        <% }%>
+
     </section>
   </section>
 </body>
