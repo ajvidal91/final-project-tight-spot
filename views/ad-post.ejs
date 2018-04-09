@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/ad-post.css">
+  <title></title>
+</head>
+<header>
+  <nav>
+    <ul id="navList">
+      <li><a class="contact" href="/">Home</a></li>
+      <li><a class="about" href="#">About</a><span> |</span></li>
+      <li><a class="contact" href="/signup">Post now </a><span> |</span></li>
+      <li><a class="contact" href="/login">Log in </a><span> |</span></li>
+    </ul>
+  </nav>
+</header>
+
+<body>
+  <section id="postContainer">
+    <section id="postContainer">
+      <section id="details">
+
+        <h1><%= message.adTitle %></h1>
+        <h4><%= message.zip %></h4>
+
+
+        <span><%= message.sqFeet %></span>
+        <span><%= message.minimum %></span>
+        <span><%= message.maximum %></span>
+        <span><%= message.pets %></span>
+        <span><%= message.family %></span>
+        <span><%= message.email %></span>
+        <span><%= message.phone %></span>
+
+      </section>
+      <p>
+        <%= message.textArea %>
+      </p>
+
+    </section>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/form.css">
+  <title></title>
+</head>
+
+<body>
+  <header id="postHeader">
+    <img src="#" alt="">
+    <nav>
+      <ul id="navList">
+
+        <li><a class="about" href="/about">About</a></li>
+        <li><a class="log-out" href="/">Log-Out</a><span> |</span></li>
+        <li><a class="report" href="/">Home</a><span> |</span></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="postArea">
+    <section id="inputSection">
+      <% if (user.local.email) { %>
+        <form class="" action="/message" method="post">
+          <input id="postTitle" placeholder="Ad title" type="text" name="adTitle" value="">
+          <input id="location" placeholder="zip code" type="tel" name="zip" value="">
+    </section>
+    <textarea placeholder="Write ad here..." name="textArea" rows="25" cols="73"></textarea>
+
+    <section id="conditionSection">
+      <fieldset>
+        <legend>Conditions</legend>
+        <label for="">ft <sup>2</sup></label>
+        <input class="squareFeetInput" placeholder="sq feet" type="text" name="sqFeet" value=>
+        <label for="minimum">$ min</label>
+        <input name="minimum" placeholder="minimum" type="tel" class="minimum">
+        <label for="maximum">$ max</label>
+        <input name="maximum" placeholder="maximum" type="tel" class="maximum">
+        <label for="">pets</label>
+        <select class="pets" name="pets">
+          <option  value="none">none</option>
+          <option value="dog">dog</option>
+          <option value="cat">cat</option>
+          <option value="other">other</option>
+        </select>
+        <label for="">Family size</label>
+        <select class="familySize" name="family">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="4Plus">4 +</option>
+        </select>
+
+      </fieldset>
+    </section>
+
+
+    <section id="contactSection">
+      <fieldset class="emailFieldset">
+        <legend>contact</legend>
+        <label for="">email</label>
+        <input placeholder="enter e-mail" type="email" name="email" value="">
+        <label for="">contact name</label>
+        <input placeholder="Contact name" type="text" name="contact" value="">
+        <label for="">phone #</label>
+        <input class="phoneNumberInput" placeholder="(555)555-5555" type="tel" name="phone">
+        <button type="submit" name="button">Submit</button>
+        </form>
+      </fieldset>
+      <% } %>
+    </section>
+  </section>
+
+</body>
+
+</html>
