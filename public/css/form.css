@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Patua+One');
 
 * {
   font-family: 'Roboto', sans-serif;
@@ -38,13 +39,13 @@ border: 1px solid black;
 }
 
 #postHeader li{
-float: right;
-margin-left: 10px;
-font-size: 1.8em;
-font-weight: 100;
-list-style: none;
-color: white;
-text-decoration: none;
+  float: right;
+  margin-right: 10px;
+  font-size: 1.8em;
+  font-weight: bold;
+  list-style: none;
+  color: white;
+  text-decoration: none;
 }
 
 #postHeader a{
@@ -53,9 +54,9 @@ text-decoration: none;
 }
 
 #postHeader{
-height: 100px;
-width: auto;
-background: #84333D;
+  height: 100px;
+  background: #84333D;
+  padding: 0 34px;
 }
 
 .emailFieldset{
@@ -89,4 +90,27 @@ width: 10%;
 
 .phoneNumberInput{
 width: 15%;
+}
+
+nav{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.logo{
+color: white;
+font-size: 41px;
+font-family: "Patua One", "roboto", sans-serif;
+text-decoration: none;
+}
+
+input{
+padding: 5px;
+}
+
+textarea{
+padding: 5px;
 }

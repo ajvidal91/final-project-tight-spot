@@ -4,18 +4,20 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/form.css">
-  <title></title>
+  <title>Create Ad</title>
 </head>
 
 <body>
   <header id="postHeader">
-    <img src="#" alt="">
     <nav>
+      <a href="/">
+        <span class="logo"> Tight Spot</span>
+      </a>
       <ul id="navList">
+        <li><a href="/about">About </a></li>
+        <li><a href="/login">Log in</a><span> |</span></li>
+        <li><a href="/signup">Sign up</a><span> |</span></li>
 
-        <li><a class="about" href="/about">About</a></li>
-        <li><a class="log-out" href="/">Log-Out</a><span> |</span></li>
-        <li><a class="report" href="/">Home</a><span> |</span></li>
       </ul>
     </nav>
   </header>
@@ -65,8 +67,12 @@
         <input placeholder="enter e-mail" type="email" name="email" value="">
         <label for="">contact name</label>
         <input placeholder="Contact name" type="text" name="contact" value="">
-        <label for="">phone #</label>
-        <input class="phoneNumberInput" placeholder="(555)555-5555" type="tel" name="phone">
+        <label for="">Type</label>
+        <select class="familySize" name="phone">
+          <option value="house">House</option>
+          <option value="apt">Apartment</option>
+          <option value="studio">Studio</option>
+        </select>
         <button type="submit" name="button">Submit</button>
         </form>
       </fieldset>

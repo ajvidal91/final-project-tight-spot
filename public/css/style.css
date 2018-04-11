@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
+@import url('https://fonts.googleapis.com/css?family=Patua+One');
 * {
   font-family: 'Roboto', sans-serif;
   outline: none;
@@ -11,9 +11,23 @@ body {
   padding: 0;
 }
 
+
+
+#bodyContainer{
+  height: 900px;
+  background:
+}
+
+.logo{
+color: white;
+font-size: 41px;
+font-family: "Patua One", "roboto", sans-serif;
+text-decoration: none;
+}
+
 #adListHeader li{
 float: right;
-margin-left: 10px;
+margin-right: 10px;
 font-size: 1.8em;
 font-weight: bold;
 list-style: none;
@@ -29,6 +43,15 @@ text-decoration: none;
 #adListHeader{
 height: 100px;
 background: #84333D;
+padding: 0 34px;
+}
+
+#adListHeader nav{
+display: flex;
+width: 100%;
+justify-content: space-between;
+flex-flow: row wrap;
+align-items: center;
 }
 
 .reportLink, #adsListed a{
@@ -40,9 +63,12 @@ font-size: .8em;
 }
 
 #adsContainer{
-width: 80%;
-margin-left: 10%;
+width: 50%;
+margin: 34px auto;
 font-size: 1.7em;
+background: #F5FCFF;
+box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+padding: 34px;
 }
 
 #adsContainer li{
@@ -61,20 +87,6 @@ margin-left: 10%;
 textarea{
 margin: 100px 0 0 25%;
 font-size: 1.2em;
-}
-
-.locationSearch{
-margin-top: 20px;
-margin-right: 0;
-padding: 0;
-border: 0;
-width: 10%;
-height: 100%;
-padding: 10px 20px;
-background: white;
-border-radius: 3px;
-box-shadow: 0px 8px 15px rgba($tundora, 0.1);
-transition: all 0.4s ease;
 }
 
 h1{

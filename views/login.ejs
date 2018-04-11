@@ -13,10 +13,14 @@
   <section id="main-wrapper">
     <section class="left-container">
       <a href="/">
-        <h1 class="get-started-text">Tight <span class="started-word">spot.</span></h1>
-      </a>
+        <span class="logo"> Tight Spot</span>
+  <h3 class="white-text">
+Helping you find your next home
+</h3>
+  </a>
     </section>
     <section class="right-container-login">
+
       <h1 class="login-text">Login</h1>
 
       <% if (message.length > 0) { %>
@@ -34,13 +38,14 @@
               <legend> Password</legend>
               <input class="loginInput" placeholder="Password" type="password" name="password">
             </fieldset>
-            <button id="loginBtn" type="submit" name="button">
+            <section id="btn-sec">
+              <button id="loginBtn" type="submit" name="button">
               Log in <i class="fas fa-arrow-right"></i>
             </button>
           </form>
           <a href="#" class="forgotPassword">Forgot password?</a>
           <h5><a href="/signup">Don't have an account?</a></h5>
-
+          </section>
     </section>
   </section>
 </body>

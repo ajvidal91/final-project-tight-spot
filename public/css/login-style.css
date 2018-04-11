@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+/* logo font */
+@import url('https://fonts.googleapis.com/css?family=Patua+One');
+
 html {
 font-size: 15px;
 }
@@ -15,6 +18,16 @@ body {
   padding: 0;
 }
 
+.logo{
+color: white;
+font-size: 41px;
+font-family: "Patua One", "roboto", sans-serif;
+}
+
+.left-container a{
+text-decoration: none;
+}
+
 .loginInput {
   background-color: transparent;
   border: none;
@@ -28,7 +41,9 @@ body {
   padding: 10px 0px;
   position: relative;
   top: 50%;
-  width: 200px;
+  width: 75%;
+  max-width: 414px;
+  min-width: 316px;
 
   &:focus {
     outline: none;
@@ -70,7 +85,7 @@ body {
 }
 
 .left-container {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://static.pexels.com/photos/37727/pexels-photo-37727.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/house.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 45%;
@@ -110,4 +125,24 @@ a{
 fieldset{
   width: 50%;
   border: none;
+}
+
+.white-text{
+color: white;
+
+}
+@media (min-width: 320px) and (max-width: 800px){
+
+btn-sec{
+padding: 12px;
+}
+
+.hidden-text{
+font-size: 21px;
+}
+
+.left-container{
+display: none;
+}
+
 }

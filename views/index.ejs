@@ -6,35 +6,43 @@
   <title>Ads</title>
 </head>
 
-<body id="listBody">
+<body>
   <header id="adListHeader">
     <nav>
-
+      <a href="/">
+        <span class="logo"> Tight Spot</span>
+      </a>
       <ul id="navList">
-        <li><a class="about" href="/about">About </a></li>
+        <li><a href="/about">About </a></li>
         <li><a href="/login">Log in</a><span> |</span></li>
-        <li><a href="/signup">Post now</a><span> |</span></li>
+        <li><a href="/signup">Sign up</a><span> |</span></li>
+
       </ul>
     </nav>
   </header>
-  <section id="adsContainer">
-    <p>Ads are updated one at a time.<br> Each poster is only allowed two posts a day. </p>
-    <ul id="adsListed">
-      <% for(var i=0; i<message.length; i++) {%>
-        <li class="message">
-          <h1><a href="/posting/<%=message[i]._id%>"><%= message[i].adTitle %></a></h1>
-          <h6><%= message[i].zip %></h6>
-          <p>
-            <%= message[i].textArea %>
-          </p>
-        </li>
-        <% } %>
-    </ul>
+  <section id="bodyContainer">
+    <section id="adsContainer">
+      <h2>Ad Listings</h2>
+      <p>Ads are updated one at a time.<br> Each poster is only allowed two posts a day. </p>
+      <ul id="adsListed">
+        <% for(var i=0; i<message.length; i++) {%>
+          <li class="message">
+            <h1><a href="/posting/<%=message[i]._id%>"><%= message[i].adTitle %></a></h1>
+            <h6><%= message[i].zip %></h6>
+            <p>
+              <%= message[i].textArea %>
+            </p>
+          </li>
+          <% } %>
+      </ul>
+    </section>
   </section>
+
+
   <script src="main.js"></script>
 </body>
 
-</html>
-</body>
+
+
 
 </html>
