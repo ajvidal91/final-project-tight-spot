@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 @import url('https://fonts.googleapis.com/css?family=Patua+One');
+
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
   outline: none;
   font-weight: 100;
 }
@@ -11,28 +12,22 @@ body {
   padding: 0;
 }
 
-
-
-#bodyContainer{
-  height: 900px;
-  background:
-}
-
 .logo{
-color: white;
-font-size: 41px;
-font-family: "Patua One", "roboto", sans-serif;
-text-decoration: none;
+  color: white;
+  font-size: 55px;
+  font-family: "Patua One", "roboto", sans-serif;
+  text-decoration: none;
 }
 
-#adListHeader li{
-float: right;
-margin-right: 10px;
+#navList {
+display: flex;
 font-size: 1.8em;
-font-weight: bold;
 list-style: none;
 color: white;
+margin-right: 10px;
 text-decoration: none;
+width: 13em;
+justify-content: space-between;
 }
 
 #adListHeader a{
@@ -41,9 +36,10 @@ text-decoration: none;
 }
 
 #adListHeader{
-height: 100px;
-background: #84333D;
-padding: 0 34px;
+  background: #1976d2;
+  padding: 20px 34px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  margin-bottom: 45px;
 }
 
 #adListHeader nav{
@@ -54,7 +50,7 @@ flex-flow: row wrap;
 align-items: center;
 }
 
-.reportLink, #adsListed a{
+ #adsListed a{
 color: #84333D;
 }
 
@@ -63,12 +59,12 @@ font-size: .8em;
 }
 
 #adsContainer{
-width: 50%;
-margin: 34px auto;
-font-size: 1.7em;
-background: #F5FCFF;
-box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-padding: 34px;
+  width: 75%;
+  margin: 0 auto;
+  font-size: 1.7em;
+  background: #F5FCFF;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  padding: 34px;
 }
 
 #adsContainer li{
@@ -84,12 +80,39 @@ width: 80%;
 margin-left: 10%;
 }
 
-textarea{
-margin: 100px 0 0 25%;
-font-size: 1.2em;
-}
 
 h1{
 text-decoration: underline;
 text-decoration-color: #84333D;
+}
+
+#adsList{
+  width: 75%;
+  margin: 40px auto;
+  font-size: 1.7em;
+  background: #F5FCFF;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  padding: 34px;
+}
+
+.message{
+border-bottom: 1px solid lightgrey;
+list-style: none;
+}
+
+.message a {
+color: #1976d2;
+}
+
+.ad-text{
+  text-align: center;
+  font-size: 2em;
+  margin: 0;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 745px){
+  #adListHeader nav{
+    flex-direction: column;
+  }
 }

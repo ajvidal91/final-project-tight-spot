@@ -9,19 +9,27 @@
   font-weight: lighter;
 }
 
-body {
+  body {
   margin: 0;
   padding: 0;
 }
 
-header li{
-float: right;
-margin-left: 10px;
+  .logo{
+  color: white;
+  font-size: 55px;
+  font-family: "Patua One", "roboto", sans-serif;
+  text-decoration: none;
+}
+
+nav ul {
+display: flex;
 font-size: 1.8em;
-font-weight: bold;
 list-style: none;
 color: white;
+margin-right: 10px;
 text-decoration: none;
+width: 13em;
+justify-content: space-between;
 }
 
 header a{
@@ -29,10 +37,19 @@ color: white;
 text-decoration: none;
 }
 
-header{
-height: 100px;
-background: #84333D;
-padding: 0 34px;
+  header{
+  background: #1976d2;
+  padding: 20px 34px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  margin-bottom: 45px;
+}
+
+header nav{
+display: flex;
+width: 100%;
+justify-content: space-between;
+flex-flow: row wrap;
+align-items: center;
 }
 
 #postContainer{
@@ -40,17 +57,23 @@ width: 55%;
 margin: 0 auto;
  }
 
- .logo{
- color: white;
- font-size: 41px;
- font-family: "Patua One", "roboto", sans-serif;
- text-decoration: none;
- }
+h1{
+font-size: 40px;
+}
 
- nav{
-   display: flex;
-   width: 100%;
-   justify-content: space-between;
-   flex-flow: row wrap;
-   align-items: center;
- }
+.min, .max{
+float: right;
+display: inline;
+}
+
+a{
+color: #1976d2;
+}
+
+@media only screen and (max-width: 745px){
+
+header nav{
+    flex-direction: column;
+  }
+
+}

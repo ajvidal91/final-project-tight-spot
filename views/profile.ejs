@@ -4,19 +4,20 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/form.css">
-  <title>Create Ad</title>
+  <metaname="viewport" content="width=device-width, initial-scale=1">
+    <title>Create Ad</title>
 </head>
 
 <body>
-  <header id="postHeader">
+  <header>
     <nav>
       <a href="/">
         <span class="logo"> Tight Spot</span>
       </a>
-      <ul id="navList">
+      <ul>
         <li><a href="/about">About </a></li>
-        <li><a href="/login">Log in</a><span> |</span></li>
-        <li><a href="/signup">Sign up</a><span> |</span></li>
+        <li><a href="/login">Log in</a></li>
+        <li><a href="/signup">Sign up</a></li>
 
       </ul>
     </nav>
@@ -25,11 +26,12 @@
   <section id="postArea">
     <section id="inputSection">
       <% if (user.local.email) { %>
+        <h1>Write post here</h1>
         <form class="" action="/message" method="post">
           <input id="postTitle" placeholder="Ad title" type="text" name="adTitle" value="">
           <input id="location" placeholder="zip code" type="tel" name="zip" value="">
     </section>
-    <textarea placeholder="Write ad here..." name="textArea" rows="25" cols="73"></textarea>
+    <textarea placeholder="Write ad here..." name="textArea"></textarea>
 
     <section id="conditionSection">
       <fieldset>
@@ -37,9 +39,9 @@
         <label for="">ft <sup>2</sup></label>
         <input class="squareFeetInput" placeholder="sq feet" type="text" name="sqFeet" value=>
         <label for="minimum">$ min</label>
-        <input name="minimum" placeholder="minimum" type="tel" class="minimum">
+        <input name="minimum" placeholder="$ min" type="tel" class="minimum">
         <label for="maximum">$ max</label>
-        <input name="maximum" placeholder="maximum" type="tel" class="maximum">
+        <input name="maximum" placeholder="$ max" type="tel" class="maximum">
         <label for="">pets</label>
         <select class="pets" name="pets">
           <option  value="none">none</option>
@@ -64,11 +66,11 @@
       <fieldset class="emailFieldset">
         <legend>contact</legend>
         <label for="">email</label>
-        <input placeholder="enter e-mail" type="email" name="email" value="">
+        <input placeholder="enter e-mail" type="email" name="email" value="<%= user.local.email %>">
         <label for="">contact name</label>
         <input placeholder="Contact name" type="text" name="contact" value="">
         <label for="">Type</label>
-        <select class="familySize" name="phone">
+        <select class="familySize" name="type">
           <option value="house">House</option>
           <option value="apt">Apartment</option>
           <option value="studio">Studio</option>

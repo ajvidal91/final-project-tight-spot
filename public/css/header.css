@@ -47,11 +47,6 @@ flex-flow: row wrap;
 align-items: center;
 }
 
- #container{
-margin:34px auto;
-text-align: center;
-font-size: 26px;
-}
 
 
 @media only screen and (max-width: 745px){

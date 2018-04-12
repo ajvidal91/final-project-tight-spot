@@ -12,46 +12,45 @@
       <span class="logo"> Tight Spot</span>
     </a>
     <ul id="navList">
-      <li><a href="/about">About </a></li>
-      <li><a href="/login">Log in</a><span> |</span></li>
-      <li><a href="/signup">Sign up</a><span> |</span></li>
-
+      <li><a href="/signup">Sign up </a></li>
+      <li><a href="/login">Log in</a></li>
+      <li><a href="/about">About</a></li>
     </ul>
   </nav>
 </header>
 
 <body>
+
   <section id="postContainer">
-    <section id="postContainer">
-      <section id="detailsA">
+    <section id="detailsA">
 
-        <h1><%= message.adTitle %></h1>
-        <h4><%= message.zip %></h4>
+      <h1><%= message.adTitle %></h1>
+      <h5 class="zip">Zip Code<%= message.zip %></h5>
 
-        <p>
-          <%= message.textArea %>
-        </p>
-
-      </section>
-
-      <section id="detailsB">
-        <h5><%= message.sqFeet %></h5>
-        <h3><%= message.minimum %></h3>
-        <h3><%= message.maximum %></h3>
-        <h5><%= message.pets %></h5>
-        <h4><%= message.family %></h4>
-        <h2><a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank"><%= message.email %></a></h2>
-
-        <%= message.phone %>
-          </>
-
-      </section>
+      <p>
+        <%= message.textArea %>
+      </p>
 
     </section>
 
+    <section id="detailsB">
+      <h5 class="feet condtion"><%= message.sqFeet %> ft<sup>2:</sup></h5>
+      <h3 class="max condtion">$<%= message.maximum %> </h3>
+      <h3 class="min condtion">Budget: $<%= message.minimum %> - </h3>
+      <h5 class="pets condtion">pets: <%= message.pets %></h5>
+      <h4 class="family condtion">Family size: <%= message.family %></h4>
+      <h2 class="email condtion"><a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank"><%= message.email %></a></h2>
+
+      <h4 class="type condtion">Housing type wanted: <%= message.type %></h4>
+
+
+    </section>
 
   </section>
-  </section>
+
+
+
+
 </body>
 
 </html>

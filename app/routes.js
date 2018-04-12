@@ -23,10 +23,10 @@ module.exports = function(app, passport, db, ObjectId) {
 
   app.get('/posting/:id', function(req, res) {
     uId = ObjectId(req.params.id)
-    console.log(uId)
-    db.collection('message').findOne({"_id": uId}, (err, result) => {
+    db.collection('message').findOne({
+      "_id": uId
+    }, (err, result) => {
       if (err) return console.log(err)
-      console.log(result)
       res.render('ad-post.ejs', {
         message: result
       })
@@ -68,7 +68,7 @@ module.exports = function(app, passport, db, ObjectId) {
       family: req.body.family,
       email: req.body.email,
       contact: req.body.contact,
-      phone: req.body.phone
+      phone: req.body.type
     }, (err, result) => {
       if (err) return console.log(err)
       console.log('saved to database')

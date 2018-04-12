@@ -12,9 +12,49 @@ body {
   padding: 0;
 }
 
+.logo{
+  color: white;
+  font-size: 55px;
+  font-family: "Patua One", "roboto", sans-serif;
+  text-decoration: none;
+}
+
+nav ul {
+display: flex;
+font-size: 1.8em;
+list-style: none;
+color: white;
+margin-right: 10px;
+text-decoration: none;
+width: 13em;
+justify-content: space-between;
+}
+
+header a{
+color: white;
+text-decoration: none;
+}
+
+  header{
+  background: #1976d2;
+  padding: 20px 34px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  margin-bottom: 45px;
+}
+
+header nav{
+display: flex;
+width: 100%;
+justify-content: space-between;
+flex-flow: row wrap;
+align-items: center;
+}
+
+
 #postArea{
   width: 50%;
   margin: 10px auto;
+  min-width: 450px;
 }
 
 #postTitle{
@@ -30,34 +70,16 @@ width: 15%;
 width: 100%;
 padding: 0;
 margin: 0 0 10px 0;
-
+min-width: 450px;
 }
 
 textarea{
 font-size: 1.2em;
 border: 1px solid black;
+height: 400px;
+width: 820px;
 }
 
-#postHeader li{
-  float: right;
-  margin-right: 10px;
-  font-size: 1.8em;
-  font-weight: bold;
-  list-style: none;
-  color: white;
-  text-decoration: none;
-}
-
-#postHeader a{
-color: white;
-text-decoration: none;
-}
-
-#postHeader{
-  height: 100px;
-  background: #84333D;
-  padding: 0 34px;
-}
 
 .emailFieldset{
 margin-top: 10px;
@@ -68,12 +90,17 @@ width: 85.5%;
 margin-bottom: 5px;
 }
 
+#contactSection{
+min-width: 450px;
+}
+
 input{
 border: 1px solid black;
 }
 
 #conditionSection{
 width: 89%;
+min-width: 450px;
 }
 
 .squareFeetInput{
@@ -92,25 +119,65 @@ width: 10%;
 width: 15%;
 }
 
-nav{
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  flex-flow: row wrap;
-  align-items: center;
-}
-
-.logo{
-color: white;
-font-size: 41px;
-font-family: "Patua One", "roboto", sans-serif;
-text-decoration: none;
-}
-
 input{
 padding: 5px;
 }
 
+h1{
+text-align: center;
+font-size: 35px;
+}
+
+/***************** mobile responsiveness **********************************/
+
+@media only screen and (max-width: 745px){
+  header nav{
+    flex-direction: column;
+  }
+
+#contactSection fieldset{
+width: 400px;
+
+}
+#contactSection label{
+display: none;
+}
+
+#conditionSection{
+
+}
+
+#location{
+margin: 0 0 0 15%;
+}
+
+header{
+width: 100%;
+text-align: center;
+}
+
+#conditionSection label{
+display: none;
+}
+
 textarea{
-padding: 5px;
+width: 400px;
+}
+
+fieldset{
+width: 400px;
+}
+
+#postArea{
+margin-left: 20%;
+}
+
+.min .max{
+display: inline;
+}
+
+button{
+margin-left: 40%;
+}
+
 }
